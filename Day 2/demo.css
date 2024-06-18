@@ -1,0 +1,8 @@
+h1,h2{
+    color:brown;
+    background-color: pink;
+
+}
+.c1{                               /* "." means class */
+    color:cadetblue;
+}
