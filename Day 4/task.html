@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        function emp(id,name,salary)
+        {
+            alert(this);
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+        }
+        var ob=new emp(1,"Sohan",800000);
+        document.write(ob.name+"   "+ob.salary);
+        document.write("</br>");
+        document.write(ob.constructor);
+
+        
+
+        for(let pp in ob)
+        {
+        document.write(pp+" "+ob[pp]);
+        document.write("</br>");
+        }
+        document.write(typeof(ob))
+        document.write(ob);
+        // emp(2,"mrunal",750000);
+        // document.write(window.nm);              //Chcek for use strict
+       
+       
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
