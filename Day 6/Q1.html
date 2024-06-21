@@ -1,0 +1,32 @@
+<!--1. Create 2 text-box and create a button on click of two value entered by user-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get User Input</title>
+    
+</head>
+<body>
+    <h1>Get user Input</h1>
+        <label for="Name">Name:</label>
+        <input type="text" id="Name"  placeholder="Put Name Here!!!">
+        
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" placeholder="Put Age Here!!!">
+        <button onclick="myFunction()">Click me</button> 
+        <div id="result"></div>
+        <script>
+            'use strict'
+        function myFunction()
+        {
+            const Name=document.getElementById("Name").value;
+            const Age=document.getElementById("Age").value;
+            const resultdiv=document.getElementById("result");
+            resultdiv.innerHTML=`You Entered:${Name} and ${Age}`;
+        }
+
+        </script>
+</body>
+</html>

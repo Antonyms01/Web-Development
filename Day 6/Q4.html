@@ -1,0 +1,57 @@
+<!--4. Create 2 text box and button
+1.Enter Pass
+2. Reenter Pass
+3. If both value not same give error message in span tag in red color-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+    <script>
+        function checkpass(event)
+        {
+            event.preventDefault();
+            const pass=document.getElementById("pass");
+            const repass=document.getElementById("repass");
+            const message=document.getElementById("message");
+
+            if(pass.value===repass.value)
+            {
+                message.textContent="Password Match";
+                message.className="success";
+            }
+            else
+            {
+                message.textContent="Password Does Not Match!!!";
+                message.className="error";
+            }
+        }
+       
+    </script>
+</head>
+<body>
+    <form onsubmit="checkpass(event)">
+        <label for="pass">Pass:</label>
+    <input type="pass" id="pass" required>
+    <br><br>
+    <label for="repass">Re-enter Pass: </label>
+    <input type="pass" id="repass" required>
+    <br><br>
+    <span id="message"></span>
+    <br><br>
+    <button type="submit">Submit</button>
+    
+    </form>
+    
+</body>
+</html>

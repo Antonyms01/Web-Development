@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changedata()
+        {
+            let divh=document.getElementById("h");
+            divh.innerHTML="Bye";
+        }
+        function go()
+        {
+            let divb=document.getElementById("b");
+            divb.innerHTML="Hello";
+        }
+
+        function cli()
+        {
+            let divh=document.getElementById("h");
+            divh.innerHTML="Bye";
+            let divb=document.getElementById("b");
+            divb.innerHTML="Hello";
+        }
+    </script>
+</head>
+<body>
+    <div id="h" onmouseover="changedata()">HEllo</div>
+    <div id="b" onclick="go()">Bye</div>
+    
+    <button onclick="cli()">Click Here</button>
+</body>
+</html>

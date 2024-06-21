@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Write 2 div tag in 1st div tag hello 2nd div tag bye onmouseover on hello it should replace with value welcome -->
+    <div id="div1">
+        <label id="l1" onmouseenter="change()" onmouseleave="change()">Hello</label>
+    </div>
+    <div>
+        <label>Bye</label>
+    </div>
+</body>
+
+    <script>
+        function change() {
+            
+            const d = document.getElementById("div1")
+            const l = d.querySelector("label")
+            if(l.textContent == "Hello")
+                l.textContent = "Welcome";
+            else
+                l.textContent = "Hello"
+        }
+        function reset() {
+            const d = document.getElementById("l1")
+            d.textContent = "Hello";
+        }
+    </script>
+</html>

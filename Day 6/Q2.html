@@ -1,0 +1,41 @@
+<!--
+2. Create a div tag with some css formatting on mouse over copy this data in p tag
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p
+        {
+            border: 1px solid;
+            width: 130px;
+        }
+    </style>
+    <script>
+        function changedata() 
+        {
+            let div=document.getElementById("h");
+            let para=document.getElementById("p");
+            para.innerHTML=div.innerHTML;
+        }
+
+        function hov()
+        {
+            document.getElementById('h').style.background = "red";
+        }
+    </script>
+</head>
+<body>
+
+    <div id="h" style="width: 130px; border: 2 solid;">Humko Badal Do Bhaiyaaji</div>>
+    <p id="p" onmouseover="changedata()" >This is para</p>
+
+   <script >
+    document.getElementById("h").addEventListener("mouseover", hov);
+   </script>
+</body>
+</html>

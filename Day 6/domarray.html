@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function callme()
+        {
+            let s=document.getElementsByTagName("p");
+            let l=s.length;
+            for(let i=0;i<l;i++)
+            {
+               document.write (s[i].innerHTML);           
+             }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="callme()" value="clickme"/>
+    <p>Aur Bhai Waiter<b> Sab bhalo naa??</b></p>
+    <p>Ki krt hooo???</p>
+    <p>KAm Dham kr lo</p>
+</body>
+</html>
+
+<!--read 5 p tag and display in div tag-->

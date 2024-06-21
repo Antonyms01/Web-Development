@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+        const module=
+        {
+            x:44,
+            getx: function()
+            {
+               //alert(x);
+                return this.x;
+            }
+        };
+        const unboundGetx=module.getx;
+        //console.log(unboundGetx ());
+        const boundGetx=unboundGetx.bind(module);
+        console.log(boundGetx());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
