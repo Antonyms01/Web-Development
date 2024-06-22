@@ -1,0 +1,32 @@
+<!-- 1.create image on the page on mouseover hide the img and onmouseout make the img visible  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img
+        {
+            height: auto;
+            width: 500px;
+        }
+    </style>
+    <script>
+        function invisible()
+        {
+            document.getElementById("img").style.visibility='hidden';
+        } 
+        function visible()
+        {
+            document.getElementById("img").style.visibility='visible';
+        } 
+    </script>
+</head>
+<body>
+    <img id="img" src="Images/peakpx.png" onmouseover="invisible()" onmouseout="visible()">
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html><head><script>
+    function readradio()
+    {
+    var l=document.frm.sl.length
+    // for(i=0;i<l;i++)
+    //     {   if(document.frm.sl[i].selected)
+    //         document.frm.t.value=(document.frm.sl[i].text)      //if we write etxt instead value then will get index number
+    //     }
+        let pobj=document.getElementById("pp");
+    pobj.innerHTML=document.frm.sl.selectedIndex
+    let index=document.frm.sl.selectedIndex;
+    pobj.innerHTML+=(document.frm.sl[index].text)
+    }
+    </script>
+    </head><body><p id="pp"></p>
+    <form name="frm">
+        <select name="sl"  onchange="readradio()" >
+    <option value="0">dance</option>
+    <option value="1">music</option>
+    <option value="2">sports</option>
+    </select>
+    <input disabled name="t"/>
+    <input type="button"  value="read" onclick="readradio()">
+    </form>
+    </body></html>

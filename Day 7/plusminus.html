@@ -1,0 +1,51 @@
+<html><head><script>
+    function readradio()
+    { 
+    var l=document.frm.rd.length
+    let pobj=document.getElementById("pp")
+    
+        if(document.frm.rd[0].checked)
+        pobj.innerHTML=document.frm.rd[0].value
+        else
+        pobj.innerHTML=document.frm.rd[1].value
+    }
+    function cc()
+    { 
+     // document.frm.rd[0].checked=true;
+      const value1 = parseFloat(document.getElementById('txt1').value);
+        const value2 = parseFloat(document.getElementById('txt2').value);
+
+        const operation = document.querySelector('input[name="rd"]:checked').value;
+        if (rd === 'addition') {
+                result = value1 + value2;
+            } else if (operation === 'subtraction') {
+                result = value1 - value2;
+            }
+
+            document.getElementById('result').textContent = result;
+
+
+
+
+let result;
+
+    
+    }
+    </script></head>
+    <body>
+    <p id="pp"></p>
+    <form name="frm">
+    
+        <input type="text" id="txt1">
+       
+        <br>
+
+        <input type="text" id="txt2">
+        <br>
+        <input type="radio" name="rd" value="Plus" />plus
+        <input type="radio" name="rd" value="Minus" />minus
+   
+    
+    <input type="button"  value="read" onclick="readradio()">
+    <input type="button"  value="chk" onclick="cc()">
+    </form></body></html>

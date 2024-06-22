@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    <form >
+    <textarea id="Name1" >Level Sab Ke Niklenge</textarea>
+    <br>
+    <textarea id="Name2" >Shampoo</textarea>
+    <br>
+    <input type="checkbox" id="Level" onclick="swap()">Level
+</form>
+<script>
+    function swap()
+    {
+        const txt1=document.getElementById("Name1");
+        const txt2=document.getElementById("Name2");
+
+        const temp=txt1.value;
+        txt1.value=txt2.value;
+        txt2.value=temp;
+    }
+    
+</script>
+</body>
+</html>

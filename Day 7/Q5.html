@@ -1,0 +1,31 @@
+<html><head><script>
+    function readradio()
+    {     
+    let pobj=document.getElementById("t3")
+    let t1=document.frm.t1;
+    let t2=document.frm.t2;
+    let data="";
+        if(document.frm.rd[0].checked)
+       data= +t1.value + +t2.value;
+        else
+        data= +t1.value - +t2.value;
+   
+    pobj.value=data;
+    alert(data);
+    }
+    function cc()
+    { 
+      document.frm.rd[0].checked=true;
+    
+    }
+    </script></head>
+    <body>
+    <p id="pp"></p>
+    <form name="frm">
+    <input name="t1"/>
+    <input name="t2"/>
+    <input type="radio" name="rd" value="+" />+
+    <input type="radio" name="rd" value="-" checked/>-
+    <input type="button"  value="read" onclick="readradio()">
+    <input name="t3" id="t3"/>
+     </form></body></html>

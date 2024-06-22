@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<style>
+    
+  .myClass  {
+        /* text-align:  center;
+        font-size:  25px;
+        color:  rgb(0, 0, 0);
+        margin-bottom:  10px; */
+        background-color: aqua;
+}
+
+    .anotherClass  {
+        background-color:  bisque; }     /* Write css class as per need that means if i want bg color diff after myclass then write anthorclass afer .myclass*/
+</style>
+<body>
+    
+</body>
+</html>
+<div  id="myDIV"  class="mystyle  myClass">
+    I  am  a  DIV  element  with  multiple  classes
+    </div>
+    <button  onclick="myFunction()">Try  it</button>
+    <p id="demo"></p>  
+<script>
+    function  myFunction()  {
+    let  divobj=document.getElementById("myDIV");
+    y=  divobj.classList;
+    alert(y.length);
+              alert(y[0])  ;
+            divobj.classList.add("anotherClass");
+            
+            document.getElementById("demo").innerHTML  =  y[2];
+            document.getElementById("myDIV").classList.remove("anotherClass");
+            document.getElementById("myDIV").classList.replace("anotherClass","myClass");
+
+    }
+    </script>
+    
+    

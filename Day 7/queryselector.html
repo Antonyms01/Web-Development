@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV    {
+                    border: 1px   solid   black;
+                    margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDIV">
+            
+      <p>This   is   a   p   element   in   div.</p>
+            
+      <p>This   is   also   a   p   element   in   div.</p>
+    </div>
+    <p>
+      Click   the   button   to   add   a   background   color   to   the   first   p   element   (index   0)   in   div.
+    </p>
+    <button onclick="my()">querySelector</button>
+    <script>
+      
+    function my() {
+  var x = document.getElementById("myDIV").querySelector("p");
+  x.style.color = "blue";
+}
+    </script>
+  </body>
+</html>
+

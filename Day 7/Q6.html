@@ -1,0 +1,41 @@
+<!-- Q1. Create three textbox and two radio button [+ ,*] On click of radio button result of operation should be displayed in third text box give basic validation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun()
+        {
+            let pobj=document.getElementById("t3");
+            let t1=document.frm.t1;
+            let t2=document.frm.t2;
+            if(document.frm.rd[0].checked)
+       data= +t1.value + +t2.value;
+        else
+        data= +t1.value * +t2.value;
+        pobj.value=data;
+        function cc()
+    { 
+       
+      document.frm.rd[0].checked=true;
+    
+    }
+
+
+        }
+    </script>
+</head>
+<body>
+    <form name="frm">
+    <input name="t1">
+    <input name="t2">
+    <input type="radio" name="rd" value="+">+
+    <input type="radio" name="rd" value="*">*
+    <input type="button" value="button" onclick="fun()">
+    <input name="t3" id="t3">
+    </form>
+</body>
+</html>

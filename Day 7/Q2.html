@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #t1
+        {
+            height: 100px;
+            width: 300px;
+            background-color: #1979ff;
+        }
+    </style>
+    <script>
+        function upper()
+        {
+            const x=document.getElementById("t1");
+            x.value=x.value.toUpperCase();
+            const y=x.value.length;
+            document.getElementById("count").innerText=`charcter Count:${y}`;
+        }
+    </script>
+</head>
+<body>
+    <textarea id="t1" maxlength="45" oninput="upper()"></textarea>
+    <div id="count" >Charcter Count:0</div>
+
+    
+</body>
+</html>

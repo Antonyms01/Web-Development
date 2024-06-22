@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <body>
+    <ul class="example">                   <!--0-->
+        
+      <li class="child">Coffee</li>             <!--0.0-->
+        
+      <li class="child">Tea</li>                   <!--0.1-->
+    </ul>
+    <ul class="example">                    <!--1-->
+        
+      <li class="child">bun</li>            <!--1.0-->
+        
+      <li class="child">ice-cream</li>          <!--1.1-->
+    </ul>
+    <p>
+      Click the button to change the text of  the first list item (index 0).
+    </p>
+    <button onclick="myFunction()">Try it</button>
+    <p>
+      <strong>Note:</strong
+      > The getElementsByClassName() method is not supported in Internet Explorer 8 and earlier versions.
+    </p>
+    
+    <script>
+      function myFunction() {
+        var list = document.getElementsByClassName("example");
+        alert(list.length);
+        list[0].getElementsByClassName("child")[0].innerHTML = "Milk";      //Here changing the data of [0]th elementto milk through indexes
+      }
+    </script>
+
+  </body>
+</html>

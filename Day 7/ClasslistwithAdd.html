@@ -1,0 +1,48 @@
+<!DOCTYPE  html>
+<html><head><style>
+.mystyle  {
+        width:  500px;
+        height:  50px;
+}
+
+  .myClass  {
+        text-align:  center;
+        font-size:  25px;
+        color:  rgb(0, 0, 0);
+        margin-bottom:  10px;
+        background-color: aqua;
+}
+
+.anotherClass  {
+        background-color:  bisque;      /* Write css class as per need that means if i want bg color diff after myclass then write anthorclass afer .myclass*/
+}
+
+.democl
+{
+    color: violet;
+}
+</style></head><body>
+<p>Click  the  button  to  display  the  class  names  of  the  div  element.</p>
+
+<div  id="myDIV"  class="mystyle  myClass">
+       I  am  a  DIV  element  with  multiple  classes
+       </div>
+       <button  onclick="myFunction()">Try  it</button>
+       <p id="demo"></p>  
+       <script>
+       function  myFunction()  {
+       y=document.getElementById("myDIV").classList;
+       alert(y.length);
+                 alert(y[0])  ;
+               document.getElementById("myDIV").classList.add("anotherClass","democl");      //Here we add anotherclass to myDiv
+               
+               document.getElementById("demo").innerHTML  =  y[2];                  //printing anotherclass
+
+               document.getElementById("demo").innerHTML  =  y[3];
+
+               alert(y.length)
+
+
+       }            
+       </script>
+        </body>  </html>

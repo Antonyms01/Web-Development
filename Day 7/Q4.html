@@ -1,0 +1,26 @@
+<!-- 2. Use 2 p tag display your name & address on mouseover it should become one statement (inline) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function combine()
+        {
+            var name=document.getElementById("name").innerText;
+            var address=document.getElementById("address").innerText;
+            var combine=name+ ", "+ address;
+            document.getElementById("info").innerText=combine;
+        }
+    </script>
+</head>
+<body>
+    <p id="name" onmouseover="combine()">Sohan Sarode</p>
+    <p id="address" onmouseover="combine()">XYZ</p>
+    <p id="info"></p>
+   
+</body>
+</html>
