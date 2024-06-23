@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txt1
+        {
+            width: 300px;
+            height:100px;
+        }
+        .clear {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function set()
+        {
+            const userData = {
+                job: "Programmer",
+                skills: [
+                    { id: 4200, name: "Angular" },
+                    { id: 3000, name: "React" },
+                    { id: 8080, name: "Vue" },
+                ],
+            };
+            localStorage.setItem("userData",JSON.stringify(userData));
+        }
+        function get()
+        {
+            const x=localStorage.getItem("userData");
+            console.log("data:",JSON.parse(x));
+            let t=document.getElementById("txt1");
+            let obj=JSON.parse(x);
+            t.innerHTML=JSON.stringify(obj);
+        }
+       
+        function clearr()
+        {
+            localStorage.clear();
+            alert('Local storage has been cleared.');
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" id="setdata" value="Setdata" onclick="set()">
+    <br>
+    <br>
+    <input type="button" id="getdata" value="getdata" onclick="get()">
+    <br><br>
+    <textarea id="txt1"></textarea>
+    <br><br>
+    <!-- <input type="button" id="clear" value="clear" onclick="clear()"> -->
+    <button class="clear" onclick="clearr()">Clear</button>
+   
+
+
+</body>
+</html>
