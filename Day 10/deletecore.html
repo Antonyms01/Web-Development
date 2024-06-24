@@ -1,0 +1,19 @@
+<script>
+fetchdata= async function(){
+let  response  =  await  fetch("https://localhost:7227/api/Emp/8",
+{
+    method:"delete"
+}
+);
+if  (response.ok)  {  //  if  HTTP-status  is  200-299
+let  x=response;
+document.getElementById('p').innerHTML=x;
+console.log(response.headers);
+    }  
+	else{
+        alert("HTTP-Error:  "  +  response.status);
+		}
+}
+fetchdata();
+</script>
+<p id="p"></p>
