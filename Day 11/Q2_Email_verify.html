@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;            
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+
+        }
+        .set-container
+        {
+            padding: 100px;
+            width: 100px;
+            background-color: bisque;
+            align-items: center;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            visibility: hidden;
+        }
+       
+        .one{
+            margin-bottom: 15px;
+        }
+
+        .one input{
+            width: 200%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="set-container">
+        <form id="loginform">
+        <div class="one">
+        <label for="Enter Email">Enter Email:</label>
+    <input type="text" id="t1" placeholder="enter email">
+    <small class="error" id="emailerror1"></small>
+</div>
+    <br><br>
+    <div class="one">
+    <label for="Re-enter Email">Re-Enter:</label> 
+    <input type="text" id="t2" placeholder="Re-enter email">
+</div>
+    <button type="submit">Submit</button>
+</form>
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById("loginform").addEventListener('submit',function(event){
+            event.preventDefault();
+            
+            let text1=document.getElementById("t1").value;
+            let text2=document.getElementById("t2").value;
+            let error=document.getElementById("emailerror1");
+
+            if(text1==text2)
+            {
+                error.style.visibility="hidden";
+                alert("Email Matched!!!");
+                
+            }
+            else
+            {
+                error.textContent="Email do not Match";
+                error.style.visibility="visible";
+            }
+        })
+    });
+    </script>
+</body>
+</html>
