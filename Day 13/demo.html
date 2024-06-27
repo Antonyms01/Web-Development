@@ -1,0 +1,27 @@
+  <!DOCTYPE html>
+<html><body><p>How to access nested JSON objects.</p><p id="demo"></p>
+<button onclick="readdata()">read data</button>
+<script>
+var myobj = {  "name":"John",
+  "age":30,
+  "cars": {  "car1":"Ford",
+  	      "car2":"BMW",
+ 	     "car3":"Fiat"
+        }
+  }
+function readdata()
+{
+//document.getElementById("demo").innerHTML += myObj.cars.car2 + "<br>";
+//or:
+//document.getElementById("demo").innerHTML += myObj.cars["car2"];
+for(let x in myobj)
+{			console.log(typeof(myobj[x]))
+   if(typeof(myobj[x]) != "object")
+        document.getElementById("demo").innerHTML += myobj[x];
+else
+{  for(let subx in myobj[x])
+      document.getElementById("demo").innerHTML += myobj[x][subx];}
+  }
+}
+</script></body></html>
+
