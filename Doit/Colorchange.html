@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .css1{
+            color: Red;
+        }
+        .css2{
+            color: Green;
+        }
+        .css3{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+       <label> <input type="radio" name="rd" value="css1" onchange="check('css1')">Red</label>
+       <label> <input type="radio" name="rd" value="css2" onchange="check('css2')">Green</label>
+       <label> <input type="radio" name="rd" value="css3" onchange="check('css3')">Yellow</label>
+       <p id="para" >Badal Do Mujhe</p>
+    </div>
+    
+    <script>
+        let check=(csschange)=>{
+            let para=document.getElementById("para");
+            para.classList.remove("css1","css2","css3");
+            para.classList.add(csschange);  
+        }
+    </script>
+</body>
+</html>

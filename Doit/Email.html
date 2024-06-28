@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        padding-top: 80px;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        
+    }
+    form{
+        margin: 0 auto;
+        text-align: center;
+        border: solid 3px red;
+        height: 270px;
+        width: 300px;
+      
+        background-color: azure;
+
+    }
+</style>
+<script>
+    let check=(event)=>{
+        event.preventDefault();
+        let pass1=document.getElementById("txt2").value;
+        let pass2=document.getElementById("txt3").value;
+        let copy=document.getElementById("take");
+
+        if(pass1===pass2)
+        {
+            if(pass1.length=='' || pass1.length<=5 || pass1.length>=17)
+            {
+                copy.innerHTML='Password should between 6-16'
+                copy.style.color='red';
+            }
+            else{
+                copy.innerHTML='Password Matched'
+                copy.style.color='green';
+            }
+        }
+        else{
+            copy.innerHTML='Password Not Matched'
+            copy.style.color='red';
+        }
+
+    }
+    let Reset=()=>{
+        document.getElementById("txt1").value="";
+        document.getElementById("txt2").value="";
+        document.getElementById("txt3").value="";
+    }
+</script>
+<body>
+  
+        <form onsubmit="check(event)">
+        <h3>Login Form</h3>
+        <input type="text" id="txt1" placeholder="Enter Email" required/><br><br>
+        <input type="password" id="txt2" placeholder="Enter PassWord" required/><br><br>
+        <input type="password" id="txt3" placeholder="Re-Enter PassWord" required/><br><br>
+        <input type="date"><br><br>
+        <input type="submit" value="Login">
+        <input type="button" value="Reset" onclick="Reset()">
+        </form> 
+
+    <p id="take"></p>
+</body>
+</html>

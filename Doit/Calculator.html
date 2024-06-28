@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="cal.js"></script>
+    <style>
+        div{
+            border: solid 3px gray;
+            text-align: center;
+            margin: 0 auto;
+            height: 200px;
+            width: 350px;
+            padding-top: 20px;
+            background-color: azure;
+        }
+        body{
+            text-align: center;
+            padding-top: 50px;     
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Calculator</h3>
+
+        <input type="text" id="txt1" >
+        <input type="text" id="txt2" ><br>
+        <select id="operation">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <br>
+        <input type="button" id="but" value="calculate" onclick="Calculator()">
+        <br>
+        <input type="text" id="free" readonly> 
+
+
+    </div>
+</body>
+</html>
