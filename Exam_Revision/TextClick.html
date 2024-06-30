@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .css1{
+            color:red;
+        }
+        .css2{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="one" value="css1" onclick="change('css1')">Red</h1>
+    <h1 id="two" value="css2" onclick="change('css2')">Green</h1>
+    <p id="para" >Badal Do</p>
+</body>
+    <script>
+        let change=(csschange)=>{
+            let para=document.getElementById("para");
+            para.classList.remove("css1","css2");
+            para.classList.add(csschange);
+        }
+    </script>
+</html>

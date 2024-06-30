@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            text-align: center;
+            padding-top: 50px;
+        }
+         form{
+        height: 250px;
+        width: 250px;
+        border: 5px solid black;
+        padding-top: 10px;     
+        margin: 0 auto;
+      }
+    </style>
+    <script>
+        
+        let verify=(event)=>
+        {
+           event.preventDefault();
+           const pass1= document.getElementById("pass").value;
+           let pass2= document.getElementById("repass").value;
+           let get=document.getElementById("copy");
+           if(pass1===pass2)
+           {
+            if(pass1.length<=5 || pass1.length>=16 ){
+                get.innerHTML="Password length should between 6-17"
+                get.style.color="red";
+            }
+            else{
+                get.innerHTML= "Correct PassWord";
+                get.style.color="green";
+            }     
+        }
+             else
+             {
+                get.innerHTML= "InCorrect PassWord";
+                get.style.color="red";
+             }
+             
+        }
+        let reset=()=>
+        {
+            const pass1= document.getElementById("pass").value="";
+           let pass2= document.getElementById("repass").value="";
+           let get=document.getElementById("copy").value="";
+        }
+    </script>
+</head>
+<body>
+    <form id="frm" onsubmit="verify(event)">
+        <h3>Login Form</h3>
+    <input type="text" id="email" value="" placeholder="Enter email" required/>
+    <br>
+    <br>
+    <input type="password" id="pass" value="" placeholder="Enter Pass" required/>
+    <br>
+    <br>
+    <input type="password" id="repass" value="" placeholder="Re-Enter Pass" required/>
+    <br>
+    <br>
+    <input type="submit"   />
+    <input type="reset" onclick="reset()"/>
+</form>
+<p id="copy"></p>
+</body>
+</html>

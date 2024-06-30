@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: center;
+            border: 2px solid chocolate;
+            margin: 0 auto;
+            height: 200px;
+            width: 300px;
+            padding-top: 50px;
+            background-color: azure;
+        }
+        body{
+            text-align: center;
+            padding: 20px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        let copy=()=>{
+            let text1=document.getElementById("txt1").value;
+           document.getElementById("txt2").value=text1;
+        }
+    </script>
+</head>
+<body>
+    <div >
+   <input type="text" id="txt1" required><br>
+   <input type="button" id="but" value="copy" onclick="copy()"><br>
+  <input type="text" id="txt2" readonly> 
+</div>
+
+</body>
+</html>

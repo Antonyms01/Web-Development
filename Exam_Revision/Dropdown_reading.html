@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let get=()=>{
+            let list=document.getElementById("select").value;
+            document.getElementById("para").innerHTML=list;
+        }
+    </script>
+</head>
+<body>
+    <select id="select" onclick="get()">
+        <option>one</option>
+        <option>Two</option>
+        <option>Three</option>
+    </select>
+    <p id="para"></p>
+</body>
+</html>

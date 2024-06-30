@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        form{
+            text-align: center;
+            border: solid 5px black;
+            margin: 0 auto;
+            height: 250px;
+            width: 300px;
+            padding-top: 10px;         
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            font-style:italic;
+            text-align: center;
+            padding-top: 50px;  
+        }
+    </style>
+    <script>
+        let calculate=()=>{
+            let product1=document.getElementById("one");
+            let product2=document.getElementById("two");
+            let product3=document.getElementById("three");
+            let total=0;
+
+              if(product1.checked)
+               total += parseInt(product1.value);
+              if(product2.checked) 
+              total += parseInt(product2.value);
+              if(product3.checked)
+               total += parseInt(product3.value);
+
+            document.getElementById("Bill").value=total;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h1>Invoice</h1>
+   <label> <input type="checkbox" id="one"  value="10" onclick="calculate()">Maggie(10rs)</label>
+   <br>
+   <label> <input type="checkbox" id="two" value="20" onclick="calculate()">Bread(20rs)</label>
+   <br>
+   <label> <input type="checkbox" id="three" value="10" onclick="calculate()">Perk(10rs)</label>
+   <br>
+   <br>
+   <label>Total Bill:
+   <input type="text" id="Bill" readonly>
+   </label>
+</form>
+</body>
+</html>

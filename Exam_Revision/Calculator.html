@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let calculate=()=>
+        {
+            let operation=document.getElementById("Calci").value;
+            let ans=document.getElementById("takme");
+            let txt1=document.getElementById("t1").value;
+            let txt2=document.getElementById("t2").value;
+            let data;
+
+            switch(operation)
+            {
+                    case '+':
+                    data= +txt1 + +txt2;
+                    break;
+
+                    case '-':
+                    data= +txt1 - +txt2;
+                    break;
+
+                    case '*':
+                    data= +txt1 * +txt2;
+                    break;
+
+                    case '/':
+                    data= +txt1 / +txt2;
+                    break;
+
+            }
+            ans.value=data;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1"  placeholder="Enter First Number">
+    <input type="text" id="t2"   placeholder="Enter Second Number">
+
+    <select id="Calci">
+        <option >+</option>
+        <option >-</option>
+        <option >*</option>
+        <option>/</option>
+    </select>
+    <input type="button" value="calculate" onclick="calculate()">
+    <input id="takme" readonly>
+</body>
+</html>

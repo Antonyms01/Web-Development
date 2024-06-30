@@ -1,0 +1,47 @@
+Q1. Dynamic class list
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .css1
+        {
+            background-color: bisque;
+            color: red;
+        }
+        .css2
+        {
+            background-color: bisque;
+            color: blue;
+        }
+        .css3
+        {
+            background-color: bisque;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p class="" id="para">Hello I'm in paragraph tag</p>
+    <input type="radio" name="rd"  value="css1" id="" onclick="change('red')">Red
+    <input type="radio" name="rd" value="css2" id="" onclick="change('blue')">Blue
+    <input type="radio" name="rd" value="css3" id="" onclick="change('green')">Green
+</body>
+<script>
+    
+
+    let change=(color)=>{
+
+         let ele= document.getElementById('para');
+    //    ele.classList.remove("css1","css2","css3");
+    //    ele.classList.add(cssclass);        
+        ele.style.color=color;
+
+    }
+
+</script>
+</html>
